@@ -1,0 +1,23 @@
+/* src/components/FlowerAnimation.css */
+.petal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 300;
+  overflow: hidden;
+}
+.petal {
+  position: absolute;
+  top: -30px;
+  font-size: 1.8rem;
+  opacity: 0.5;
+  animation: fall linear forwards;
+  user-select: none;
+}
+@keyframes fall {
+  0% { transform: translateY(-20px) rotate(0deg); opacity: 0.6;}
+  100% { transform: translateY(100vh) rotate(360deg); opacity: 0;}
+}

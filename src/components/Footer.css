@@ -1,0 +1,17 @@
+/* src/components/Footer.css */
+.footer {
+  background: #4A3728;
+  color: #F8F1E5;
+  text-align: center;
+  padding: 2rem;
+}
+.footer-inner p {
+  margin: 0.4rem;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
+.floral-icon {
+  font-size: 1.5rem;
+  margin-top: 0.8rem;
+  opacity: 0.7;
+}

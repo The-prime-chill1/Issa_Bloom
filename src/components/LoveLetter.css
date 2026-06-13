@@ -1,0 +1,30 @@
+/* src/components/LoveLetter.css */
+.loveletter-section {
+  padding: 5rem 1rem;
+  background: linear-gradient(145deg, #FEF6EA, #F8EDE1);
+}
+.letter-card {
+  max-width: 760px;
+  margin: 0 auto;
+  background: #FFFEF8;
+  border-radius: 48px;
+  padding: 2.5rem;
+  box-shadow: 0 30px 40px -20px rgba(0,0,0,0.2);
+  border: 1px solid #E8C4C4;
+}
+.letter-card h3 {
+  font-size: 2rem;
+  color: #D4AF37;
+  margin-bottom: 1.5rem;
+}
+.letter-text p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  color: #3e2a1f;
+}
+.signature {
+  margin-top: 1.8rem;
+  font-style: italic;
+  font-weight: 600;
+}

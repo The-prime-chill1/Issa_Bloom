@@ -1,0 +1,284 @@
+/* src/components/Timeline.css */
+.timeline-section {
+  padding: 5rem 1rem;
+  background: linear-gradient(135deg, #FFF9F0 0%, #FEF5E7 50%, #FFFAF0 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Floral background pattern */
+.timeline-section::before {
+  content: "🌸🌷🌹🌼🌻🌺";
+  position: absolute;
+  font-size: 150px;
+  opacity: 0.03;
+  bottom: 0;
+  right: 0;
+  pointer-events: none;
+  white-space: nowrap;
+  transform: rotate(-15deg);
+}
+
+.timeline-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-title {
+  font-size: 3rem;
+  background: linear-gradient(135deg, #D4AF37 0%, #E8C4C4 40%, #D4AF37 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.timeline-subtitle {
+  color: #8B6B4A;
+  font-size: 1.1rem;
+  font-style: italic;
+  letter-spacing: 1px;
+}
+
+.timeline-wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  padding: 2rem 0;
+}
+
+/* Romantic curved timeline line */
+.timeline-wrapper::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 3px;
+  height: calc(100% - 2rem);
+  background: linear-gradient(180deg, 
+    #E8C4C4 0%, 
+    #D4AF37 25%, 
+    #E8A0A0 50%, 
+    #D4AF37 75%, 
+    #E8C4C4 100%);
+  top: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(212, 175, 55, 0.3);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 3.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.timeline-item:nth-child(odd) {
+  flex-direction: row;
+}
+
+.timeline-item:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+/* Content cards */
+.timeline-content {
+  width: 45%;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 2;
+  border: 1px solid rgba(232, 196, 196, 0.5);
+}
+
+.timeline-item:hover .timeline-content {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(212, 175, 55, 0.15);
+  border-color: #D4AF37;
+}
+
+/* Flower emoji icon */
+.timeline-flower-icon {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, #FFF5E8, #FFE8E8);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  z-index: 10;
+  box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+  border: 2px solid #D4AF37;
+  transition: all 0.3s ease;
+}
+
+.timeline-item:hover .timeline-flower-icon {
+  transform: translateX(-50%) scale(1.1);
+  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.5);
+}
+
+/* Year styling */
+.timeline-year {
+  margin-bottom: 0.5rem;
+}
+
+.year-number {
+  font-size: 1.8rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #D4AF37, #E8C4C4);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  letter-spacing: 1px;
+}
+
+.timeline-desc {
+  font-size: 1rem;
+  color: #5A3D2E;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+/* Petal decorations */
+.timeline-petal-decoration {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: radial-gradient(circle, #E8C4C4, #D4AF37);
+  border-radius: 0 50% 50% 50%;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.timeline-item:nth-child(odd) .timeline-petal-decoration {
+  right: -30px;
+  top: 50%;
+}
+
+.timeline-item:nth-child(even) .timeline-petal-decoration {
+  left: -30px;
+  top: 50%;
+}
+
+.timeline-item:hover .timeline-petal-decoration {
+  opacity: 0.6;
+  transform: rotate(45deg);
+}
+
+/* Flower-specific gradient backgrounds */
+.timeline-rose .timeline-content {
+  background: linear-gradient(135deg, white, #FFF0F0);
+}
+.timeline-daisy .timeline-content {
+  background: linear-gradient(135deg, white, #FFF9E8);
+}
+.timeline-tulip .timeline-content {
+  background: linear-gradient(135deg, white, #FFEFEF);
+}
+.timeline-peony .timeline-content {
+  background: linear-gradient(135deg, white, #FFF5EB);
+}
+.timeline-bouquet .timeline-content {
+  background: linear-gradient(135deg, white, #FFF8ED);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2.2rem;
+  }
+  
+  .timeline-subtitle {
+    font-size: 0.9rem;
+  }
+  
+  .timeline-wrapper::before {
+    left: 20px;
+  }
+  
+  .timeline-item,
+  .timeline-item:nth-child(odd),
+  .timeline-item:nth-child(even) {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 3rem;
+  }
+  
+  .timeline-content {
+    width: calc(100% - 60px);
+    margin-left: 60px;
+    padding: 1rem;
+  }
+  
+  .timeline-flower-icon {
+    left: 20px;
+    transform: translateX(0);
+    width: 40px;
+    height: 40px;
+    font-size: 1.3rem;
+  }
+  
+  .timeline-item:hover .timeline-flower-icon {
+    transform: translateX(0) scale(1.1);
+  }
+  
+  .year-number {
+    font-size: 1.4rem;
+  }
+  
+  .timeline-desc {
+    font-size: 0.9rem;
+  }
+  
+  .timeline-petal-decoration {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .timeline-section {
+    padding: 3rem 0.5rem;
+  }
+  
+  .timeline-content {
+    width: calc(100% - 50px);
+    margin-left: 50px;
+    padding: 0.8rem;
+  }
+  
+  .timeline-flower-icon {
+    width: 35px;
+    height: 35px;
+    font-size: 1.1rem;
+    left: 15px;
+  }
+  
+  .year-number {
+    font-size: 1.2rem;
+  }
+}
+
+/* Floating flower petals animation for timeline */
+@keyframes floatPetal {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    transform: translateY(-100px) rotate(360deg);
+    opacity: 0;
+  }
+}
